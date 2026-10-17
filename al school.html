@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The AI School College - Global Education & Productivity Hub</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The AI School College - Complete Learning Platform for Medical, AI, Software Engineering, Video Editing, and World Curriculums.">
+<link rel="icon" href="logo.png" type="image/png">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#f8fafc}
+.nav-dark{background:#1e293b}
+.accent-green{background:#04AA6D}.accent-green:hover{background:#059862}
+.sidebar-link:hover{background:#04AA6D;color:#fff!important}
+.hero-bg{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%)}
+</style>
+</head>
+<body class="flex flex-col min-h-screen text-gray-800">
+
+<header class="nav-dark text-white sticky top-0 z-40 shadow-md">
+<div class="flex items-center justify-between px-4 py-3 max-w-7xl mx-auto">
+  <div class="flex items-center space-x-3">
+    <img src="logo.png" onerror="this.onerror=null;this.src='logo_png.png';" alt="The AI School College Logo" class="h-12 w-auto object-contain bg-white rounded p-1">
+    <div class="hidden sm:block">
+      <h1 class="text-lg font-bold tracking-wide leading-none">The AI School College</h1>
+      <span class="text-xs text-green-400 font-semibold tracking-wider">Innovation & Learning Portal</span>
+    </div>
+  </div>
+  <nav class="hidden md:flex space-x-2 text-sm font-medium">
+    <a href="#departments" class="px-3 py-2 rounded hover:bg-slate-700 transition">Departments</a>
+    <a href="#ai" class="px-3 py-2 rounded hover:bg-slate-700 transition">AI Hub</a>
+    <a href="#software" class="px-3 py-2 rounded hover:bg-slate-700 transition">Software</a>
+    <a href="#graphics" class="px-3 py-2 rounded hover:bg-slate-700 transition">Graphics & Video</a>
+    <a href="#tools" class="px-3 py-2 rounded hover:bg-slate-700 transition">PDF Tools</a>
+    <a href="#curriculums" class="px-3 py-2 rounded hover:bg-slate-700 transition">Curriculums</a>
+  </nav>
+  <div class="flex items-center gap-3">
+    <div id="guestBtns" class="flex items-center gap-2">
+      <button onclick="openModal('loginModal')" class="text-xs font-semibold text-slate-300 hover:text-white transition px-2 py-1">Log In</button>
+      <button onclick="openModal('signupModal')" class="text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded transition shadow">Sign Up</button>
+    </div>
+    <div id="userBox" class="hidden items-center gap-2 text-xs">
+      <span id="userName" class="font-semibold text-green-300"></span>
+      <button onclick="logout()" class="bg-slate-600 hover:bg-slate-500 px-3 py-1.5 rounded font-semibold text-white">Logout</button>
+    </div>
+    <!-- Apna number likhein: https://wa.me/923001234567 -->
+    <a href="https://wa.me/" target="_blank" class="accent-green text-white px-3 py-1.5 rounded-full font-bold text-xs shadow flex items-center gap-1.5 transition transform hover:scale-105">
+      <i class="fa-brands fa-whatsapp text-sm"></i> Support
+    </a>
+  </div>
+</div>
+</header>
+
+<div class="bg-slate-100 border-b border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 shadow-inner">
+<div class="max-w-7xl mx-auto flex space-x-6 overflow-x-auto whitespace-nowrap">
+  <a href="https://chat.openai.com" target="_blank" class="hover:text-green-600"><i class="fa-solid fa-robot text-purple-600"></i> ChatGPT</a>
+  <a href="https://gemini.google.com" target="_blank" class="hover:text-green-600"><i class="fa-solid fa-star text-blue-500"></i> Gemini AI</a>
+  <a href="https://claude.ai" target="_blank" class="hover:text-green-600">Claude AI</a>
+  <a href="https://grok.x.ai" target="_blank" class="hover:text-green-600">Grok AI</a>
+  <a href="https://www.canva.com" target="_blank" class="hover:text-green-600"><i class="fa-solid fa-wand-magic-sparkles text-teal-500"></i> Canva</a>
+  <a href="https://www.ilovepdf.com" target="_blank" class="hover:text-green-600"><i class="fa-solid fa-file-pdf text-red-500"></i> PDF Tools</a>
+  <a href="https://code.visualstudio.com" target="_blank" class="hover:text-green-600"><i class="fa-solid fa-code text-blue-600"></i> VS Code</a>
+  <a href="https://www.youtube.com" target="_blank" class="hover:text-green-600"><i class="fa-brands fa-youtube text-red-600"></i> YouTube</a>
+</div>
+</div>
+
+<div class="flex-1 max-w-7xl w-full mx-auto flex">
+<aside class="w-64 bg-white border-r border-gray-200 hidden lg:block p-4 text-sm font-medium shrink-0">
+  <h3 class="font-bold text-slate-900 mb-3 uppercase text-xs tracking-wider border-b pb-1">Core Departments</h3>
+  <ul class="space-y-1 mb-6">
+    <li><a href="#medical" class="block px-3 py-2 rounded text-gray-700 sidebar-link">Medical & Health Science</a></li>
+    <li><a href="#ai" class="block px-3 py-2 rounded text-gray-700 sidebar-link">Artificial Intelligence (AI)</a></li>
+    <li><a href="#graphics" class="block px-3 py-2 rounded text-gray-700 sidebar-link">Graphics & Video Editing</a></li>
+    <li><a href="#software" class="block px-3 py-2 rounded text-gray-700 sidebar-link">Software Engineering</a></li>
+    <li><a href="#tools" class="block px-3 py-2 rounded text-gray-700 sidebar-link">PDF Tools & Printing</a></li>
+  </ul>
+  <h3 class="font-bold text-slate-900 mb-3 uppercase text-xs tracking-wider border-b pb-1">Design & Professional Apps</h3>
+  <ul class="space-y-1 mb-6">
+    <li><a href="https://www.adobe.com/products/photoshop.html" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">Adobe Photoshop</a></li>
+    <li><a href="https://www.adobe.com/products/illustrator.html" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">Adobe Illustrator</a></li>
+    <li><a href="https://www.coreldraw.com" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">CorelDRAW</a></li>
+    <li><a href="https://www.inpage.com" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">InPage Urdu</a></li>
+    <li><a href="https://www.photoroom.com" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">PhotoRoom AI</a></li>
+    <li><a href="https://www.capcut.com" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">CapCut Web & PC</a></li>
+    <li><a href="https://filmora.wondershare.com" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">Filmora Video Editor</a></li>
+  </ul>
+  <h3 class="font-bold text-slate-900 mb-3 uppercase text-xs tracking-wider border-b pb-1">Global & Regional Boards</h3>
+  <ul class="space-y-1">
+    <li><a href="https://www.mofept.gov.pk" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">Pakistan Education Board</a></li>
+    <li><a href="https://www.cbse.gov.in" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">India CBSE Curriculum</a></li>
+    <li><a href="https://www.gov.uk/national-curriculum" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">UK National Curriculum</a></li>
+    <li><a href="https://www.education.gov.ae" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">UAE (Dubai) Education</a></li>
+    <li><a href="https://www.usa.gov/education" target="_blank" class="block px-3 py-2 rounded text-gray-700 sidebar-link">USA Education Portal</a></li>
+  </ul>
+</aside>
+
+<main class="flex-1 p-6 md:p-8 bg-white">
+  <div id="departments" class="hero-bg text-white rounded-2xl p-8 mb-8 shadow-xl text-center">
+    <h2 class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight">From School to AI & Masters</h2>
+    <p class="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto mb-8">Access Medical Studies, AI Tools, Software Engineering IDEs, Graphic Software, and Global Curriculums in One Unified Dashboard.</p>
+    <div class="max-w-lg mx-auto relative flex items-center">
+      <input type="text" id="searchInput" placeholder="Search Mayo Hospital, Mayo Clinic, ChatGPT, Photoshop, PDF..." autocomplete="off"
+        class="w-full text-gray-800 px-5 py-3.5 pl-12 pr-24 rounded-full focus:outline-none focus:ring-4 focus:ring-green-400 shadow-lg font-medium text-sm md:text-base">
+      <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+        <i class="fa-solid fa-magnifying-glass text-gray-400 text-lg"></i>
+      </div>
+      <button id="clearSearchBtn" onclick="clearSearch()" type="button" class="absolute right-3 text-xs bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 rounded-full font-bold transition hidden">Clear</button>
+    </div>
+    <p class="text-xs text-gray-400 mt-3">Type instantly to filter departments and tools below</p>
+  </div>
+
+  <h3 class="text-2xl font-bold mb-6 text-slate-800 border-b pb-2">Central Department Hubs</h3>
+  <p id="noResults" class="hidden text-center text-red-500 mb-6 font-semibold">No matching items found. Please try another search term.</p>
+
+  <div id="contentGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+
+    <div id="medical" class="searchable-card bg-slate-50 border-t-4 border-red-500 rounded-xl p-5 shadow-sm hover:shadow-md transition">
+      <h4 class="text-lg font-bold mb-2 text-slate-900"><i class="fa-solid fa-hospital-user text-red-500 mr-2"></i>Medical & Health Science</h4>
+      <p class="text-gray-600 text-sm mb-4">Official portals, medical research, and international hospital integrations (Local & USA).</p>
+      <div class="space-y-2">
+        <a href="https://mayohospital.gop.pk" target="_blank" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 px-3 rounded-lg transition flex items-center justify-between"><span>Mayo Hospital Lahore</span><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+        <a href="https://www.mayoclinic.org" target="_blank" class="w-full bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold py-2 px-3 rounded-lg transition flex items-center justify-between"><span>Mayo Clinic USA (Global Medical Center)</span><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+        <a href="https://www.who.int" target="_blank" class="w-full bg-slate-700 hover:bg-slate-800 text-white text-xs font-bold py-2 px-3 rounded-lg transition flex items-center justify-between"><span>World Health Organization (WHO)</span><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+      </div>
+    </div>
+
+    <div id="ai" class="searchable-card bg-slate-50 border-t-4 border-purple-600 rounded-xl p-5 shadow-sm hover:shadow-md transition">
+      <h4 class="text-lg font-bold mb-2 text-slate-900"><i class="fa-solid fa-brain text-purple-600 mr-2"></i>Artificial Intelligence (AI) Hub</h4>
+      <p class="text-gray-600 text-sm mb-4">Direct access to leading AI models for education, research, and prompt engineering.</p>
+      <div class="flex flex-wrap gap-2">
+        <a href="https://chat.openai.com" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold px-3 py-2 rounded-md transition">ChatGPT</a>
+        <a href="https://gemini.google.com" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold px-3 py-2 rounded-md transition">Gemini AI</a>
+        <a href="https://claude.ai" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold px-3 py-2 rounded-md transition">Claude</a>
+        <a href="https://grok.x.ai" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold px-3 py-2 rounded-md transition">Grok</a>
+      </div>
+    </div>
+
+    <div id="software" class="searchable-card bg-slate-50 border-t-4 border-blue-600 rounded-xl p-5 shadow-sm hover:shadow-md transition">
+      <h4 class="text-lg font-bold mb-2 text-slate-900"><i class="fa-solid fa-code text-blue-600 mr-2"></i>Software Engineering & Coding</h4>
+      <p class="text-gray-600 text-sm mb-4">Learn HTML, Python, C++, and open Visual Studio development environments.</p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1.5 rounded">HTML / CSS</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1.5 rounded">Python & C++</span>
+        <a href="https://code.visualstudio.com" target="_blank" class="bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-md transition">VS Code</a>
+        <a href="https://visualstudio.microsoft.com" target="_blank" class="bg-blue-800 hover:bg-blue-900 text-white text-xs font-bold px-3 py-1.5 rounded-md transition">Visual Studio IDE</a>
+      </div>
+    </div>
+
+    <div id="graphics" class="searchable-card bg-slate-50 border-t-4 border-green-500 rounded-xl p-5 shadow-sm hover:shadow-md transition">
+      <h4 class="text-lg font-bold mb-2 text-slate-900"><i class="fa-solid fa-photo-film text-green-600 mr-2"></i>Graphics & Video Software</h4>
+      <p class="text-gray-600 text-sm mb-4">Photoshop, Illustrator, CorelDRAW, InPage, PhotoRoom, Canva, Urdu Designer, CapCut & Filmora.</p>
+      <div class="flex flex-wrap gap-1.5">
+        <a href="https://www.adobe.com/products/photoshop.html" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold px-2.5 py-1 rounded transition">Photoshop</a>
+        <a href="https://www.adobe.com/products/illustrator.html" target="_blank" class="bg-amber-700 hover:bg-amber-800 text-white text-xs font-bold px-2.5 py-1 rounded transition">Illustrator</a>
+        <a href="https://www.coreldraw.com" target="_blank" class="bg-green-700 hover:bg-green-800 text-white text-xs font-bold px-2.5 py-1 rounded transition">CorelDRAW</a>
+        <a href="https://www.inpage.com" target="_blank" class="bg-red-700 hover:bg-red-800 text-white text-xs font-bold px-2.5 py-1 rounded transition">InPage</a>
+        <a href="https://www.photoroom.com" target="_blank" class="bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold px-2.5 py-1 rounded transition">PhotoRoom</a>
+        <a href="https://www.canva.com" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-2.5 py-1 rounded transition">Canva</a>
+        <a href="https://play.google.com/store/apps/details?id=fida.pk.urduonpicturepro" target="_blank" class="bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold px-2.5 py-1 rounded transition">Urdu Designer</a>
+        <a href="https://www.capcut.com" target="_blank" class="bg-slate-700 hover:bg-slate-800 text-white text-xs font-bold px-2.5 py-1 rounded transition">CapCut</a>
+        <a href="https://filmora.wondershare.com" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-2.5 py-1 rounded transition">Filmora</a>
+      </div>
+    </div>
+
+    <div id="tools" class="searchable-card bg-slate-50 border-t-4 border-orange-500 rounded-xl p-5 shadow-sm hover:shadow-md transition">
+      <h4 class="text-lg font-bold mb-2 text-slate-900"><i class="fa-solid fa-file-pdf text-orange-500 mr-2"></i>PDF Creator & Printing Hub</h4>
+      <p class="text-gray-600 text-sm mb-4">Create, merge, convert, compress, and prepare academic notes for printing.</p>
+      <a href="https://www.ilovepdf.com" target="_blank" class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold py-2.5 rounded-lg transition">Open iLovePDF Tools &raquo;</a>
+    </div>
+
+    <div id="curriculums" class="searchable-card bg-slate-50 border-t-4 border-indigo-500 rounded-xl p-5 shadow-sm hover:shadow-md transition">
+      <h4 class="text-lg font-bold mb-2 text-slate-900"><i class="fa-solid fa-globe text-indigo-500 mr-2"></i>Global Educational Boards</h4>
+      <p class="text-gray-600 text-sm mb-4">Official curriculums for Pakistan, India, UK (England), UAE (Dubai), and USA.</p>
+      <div class="flex flex-wrap gap-2">
+        <a href="https://www.mofept.gov.pk" target="_blank" class="bg-emerald-700 text-white text-xs font-bold px-2.5 py-1.5 rounded">Pakistan</a>
+        <a href="https://www.cbse.gov.in" target="_blank" class="bg-blue-700 text-white text-xs font-bold px-2.5 py-1.5 rounded">India (CBSE)</a>
+        <a href="https://www.gov.uk/national-curriculum" target="_blank" class="bg-red-700 text-white text-xs font-bold px-2.5 py-1.5 rounded">UK (England)</a>
+        <a href="https://www.education.gov.ae" target="_blank" class="bg-amber-600 text-white text-xs font-bold px-2.5 py-1.5 rounded">UAE (Dubai)</a>
+        <a href="https://www.usa.gov/education" target="_blank" class="bg-indigo-700 text-white text-xs font-bold px-2.5 py-1.5 rounded">USA</a>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+
+<!-- Login Modal -->
+<div id="loginModal" class="hidden fixed inset-0 bg-black/70 z-50 items-center justify-center p-4">
+  <div class="bg-white rounded-2xl w-full max-w-sm p-6 shadow-2xl relative">
+    <button onclick="closeModals()" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-gray-700">&times;</button>
+    <h3 class="text-xl font-bold mb-4 text-slate-900">Log In</h3>
+    <form id="loginForm" class="space-y-3">
+      <input id="loginEmail" type="email" required placeholder="Email" class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400">
+      <input id="loginPass" type="password" required placeholder="Password" class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400">
+      <p id="loginMsg" class="text-xs text-red-600 min-h-[1rem]"></p>
+      <button type="submit" class="w-full accent-green text-white font-bold py-2.5 rounded-lg">Log In</button>
+    </form>
+    <p class="text-xs text-gray-500 mt-3 text-center">Account nahi hai? <button onclick="openModal('signupModal')" class="text-blue-600 font-semibold">Sign Up</button></p>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signupModal" class="hidden fixed inset-0 bg-black/70 z-50 items-center justify-center p-4">
+  <div class="bg-white rounded-2xl w-full max-w-sm p-6 shadow-2xl relative">
+    <button onclick="closeModals()" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-gray-700">&times;</button>
+    <h3 class="text-xl font-bold mb-4 text-slate-900">Sign Up</h3>
+    <form id="signupForm" class="space-y-3">
+      <input id="suName" type="text" required placeholder="Full Name" class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400">
+      <input id="suEmail" type="email" required placeholder="Email" class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400">
+      <input id="suPass" type="password" required minlength="6" placeholder="Password (min 6 characters)" class="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400">
+      <p id="signupMsg" class="text-xs text-red-600 min-h-[1rem]"></p>
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-lg">Create Account</button>
+    </form>
+    <p class="text-xs text-gray-500 mt-3 text-center">Pehle se account hai? <button onclick="openModal('loginModal')" class="text-blue-600 font-semibold">Log In</button></p>
+  </div>
+</div>
+
+<footer class="nav-dark text-white text-center py-5 mt-auto text-sm border-t border-slate-700">
+  <p>&copy; 2026 The AI School College. All Rights Reserved.</p>
+</footer>
+
+<script>
+// ---------- Search ----------
+var searchInput=document.getElementById('searchInput');
+function filterCards(){
+  var q=searchInput.value.trim().toLowerCase(),shown=0;
+  document.querySelectorAll('.searchable-card').forEach(function(c){
+    var ok=!q||c.textContent.toLowerCase().indexOf(q)!==-1;
+    c.style.display=ok?'':'none';if(ok)shown++;
+  });
+  document.getElementById('noResults').classList.toggle('hidden',shown>0||!q);
+  document.getElementById('clearSearchBtn').classList.toggle('hidden',!q);
+}
+function clearSearch(){searchInput.value='';filterCards();searchInput.focus();}
+searchInput.addEventListener('input',filterCards);
+
+// ---------- Login / Signup (demo: data stays in this browser only) ----------
+function openModal(id){closeModals();var m=document.getElementById(id);m.classList.remove('hidden');m.classList.add('flex');}
+function closeModals(){['loginModal','signupModal'].forEach(function(id){var m=document.getElementById(id);m.classList.add('hidden');m.classList.remove('flex');});}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModals();});
+
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v);}catch(e){return null;}}
+function getUsers(){try{return JSON.parse(store('aisc_users')||'{}');}catch(e){return {};}}
+async function hash(s){
+  if(window.crypto&&crypto.subtle){
+    var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0');}).join('');
+  }
+  return btoa(unescape(encodeURIComponent(s)));
+}
+function showUser(name){
+  var g=document.getElementById('guestBtns'),u=document.getElementById('userBox');
+  if(name){g.classList.add('hidden');u.classList.remove('hidden');u.classList.add('flex');document.getElementById('userName').textContent='Hi, '+name;}
+  else{g.classList.remove('hidden');u.classList.add('hidden');u.classList.remove('flex');}
+}
+function logout(){store('aisc_session',null);showUser(null);}
+
+document.getElementById('signupForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  var name=document.getElementById('suName').value.trim(),
+      email=document.getElementById('suEmail').value.trim().toLowerCase(),
+      pass=document.getElementById('suPass').value,
+      msg=document.getElementById('signupMsg'),users=getUsers();
+  if(users[email]){msg.textContent='Ye email pehle se registered hai.';return;}
+  users[email]={name:name,pass:await hash(pass)};
+  store('aisc_users',JSON.stringify(users));
+  store('aisc_session',JSON.stringify({name:name,email:email}));
+  msg.textContent='';this.reset();closeModals();showUser(name);
+});
+document.getElementById('loginForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  var email=document.getElementById('loginEmail').value.trim().toLowerCase(),
+      pass=document.getElementById('loginPass').value,
+      msg=document.getElementById('loginMsg'),u=getUsers()[email];
+  if(!u||u.pass!==await hash(pass)){msg.textContent='Email ya password ghalat hai.';return;}
+  store('aisc_session',JSON.stringify({name:u.name,email:email}));
+  msg.textContent='';this.reset();closeModals();showUser(u.name);
+});
+try{var s=JSON.parse(store('aisc_session')||'null');if(s)showUser(s.name);}catch(e){}
+</script>
+</body>
+</html>
