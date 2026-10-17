@@ -1,0 +1,1 @@
+# the-ai-school-college
